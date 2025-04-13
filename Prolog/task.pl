@@ -17,11 +17,10 @@ solve(Places) :-
     Hobbies = [fauna, flora, cosmos, sport],
     
     % Внесены изменения в эти строки
-    P1 = person(Name1, Hobby1),
     P4 = person(Name4, Hobby4),
-    P3 = person(Name3, Hobby3),
+    P1 = person(Name1, Hobby1),
     P2 = person(Name2, Hobby2),
-
+    P3 = person(Name3, Hobby3),
     
     
     permutation(Names, [Name1, Name2, Name3, Name4]),
