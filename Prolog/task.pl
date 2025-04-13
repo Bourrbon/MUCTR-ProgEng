@@ -16,10 +16,13 @@ solve(Places) :-
     Names = [wolf, nif, naf, nuf],
     Hobbies = [fauna, flora, cosmos, sport],
     
+    % Внесены изменения в эти строки
     P1 = person(Name1, Hobby1),
-    P2 = person(Name2, Hobby2),
-    P3 = person(Name3, Hobby3),
     P4 = person(Name4, Hobby4),
+    P3 = person(Name3, Hobby3),
+    P2 = person(Name2, Hobby2),
+
+    
     
     permutation(Names, [Name1, Name2, Name3, Name4]),
     
@@ -32,9 +35,7 @@ solve(Places) :-
     left(person(_, cosmos), person(nif, _), Places),
     % Условие 4: Нуф-Нуф сидит напротив Наф-Нафа
     opposite(person(nuf, _), person(naf, _), Places),
-    % Условие 5: Нуф-Нуф не увлекается Спортом
-    member(person(nuf, HobbyNuf), Places),
-    HobbyNuf \= sport.
+    
 
 % Вывести решение
 print_solution :-
